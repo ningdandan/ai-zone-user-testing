@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submit a case — Northline Help</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23020642'/%3E%3Cpath d='M8 17.5l5 5 11-12' fill='none' stroke='white' stroke-width='2.4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="../tokens.css" />
+    <link rel="stylesheet" href="./site.css?v=30" />
+  </head>
+  <body data-page="submit" data-summary-placement="rail">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 3l1.6 4.8L18.5 9.5 13.6 11 12 16l-1.6-5L5.5 9.5 10.4 7.8 12 3z" />
+          </svg>
+        </span>
+        Northline Help
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="search.html">Articles</a>
+        <a class="btn-primary" href="submit.html" aria-current="page">Submit a case</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <header class="page-head">
+          <h1 class="page-title">Submit a case</h1>
+          <p class="lede">Use this when what you need doesn’t clearly match an action. Describe what happened, and include a payment or dispute id if you have one.</p>
+        </header>
+
+        <div class="summary-frame">
+          <div class="summary-main">
+          <section class="form-card" id="case-card" aria-labelledby="case-heading">
+            <header>
+              <h2 id="case-heading">New support case</h2>
+              <span class="status-chip">Usually one business day</span>
+            </header>
+            <form id="case-form" novalidate>
+              <div class="form-body">
+                <div class="field" data-required>
+                  <label for="name">Your name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" value="Lena Ortiz" />
+                  <span class="error"></span>
+                </div>
+                <div class="field" data-required>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" value="lena@northline.test" />
+                  <span class="error"></span>
+                </div>
+                <div class="field" data-required>
+                  <label for="topic">Topic</label>
+                  <select id="topic" name="topic">
+                    <option value="">Select a topic</option>
+                    <option selected>Disputes</option>
+                    <option>Payouts</option>
+                    <option>Verification</option>
+                    <option>Refunds</option>
+                    <option>Security</option>
+                    <option>Something else</option>
+                  </select>
+                  <span class="error"></span>
+                </div>
+                <div class="field">
+                  <label for="reference">Payment or dispute id</label>
+                  <input id="reference" name="reference" type="text" value="dp_3k19" />
+                </div>
+                <div class="field field--full" data-required>
+                  <label for="subject">Subject</label>
+                  <input id="subject" name="subject" type="text" value="Reason code says the order never arrived" />
+                  <span class="error"></span>
+                </div>
+                <div class="field field--full" data-required>
+                  <label for="details">What happened</label>
+                  <textarea id="details" name="details">I refunded the extra charge py_1044. Dispute dp_3k19 is on py_1043, and the reason is product not received. Jonah Hale received order 1044. I have the carrier scan. I need the reason moved so the packet matches. This is not a request to release Friday’s payout.</textarea>
+                  <span class="error"></span>
+                </div>
+                <div class="field field--full">
+                  <span id="priority-label" style="font-size: 12px; font-weight: 600; color: var(--brand-navy);">Priority</span>
+                  <div class="priority" role="radiogroup" aria-labelledby="priority-label">
+                    <label><input type="radio" name="priority" value="Normal" checked /> Normal</label>
+                    <label><input type="radio" name="priority" value="Urgent" /> Urgent — deadline is today</label>
+                    <label><input type="radio" name="priority" value="Low" /> Low</label>
+                  </div>
+                </div>
+                <div class="field field--full">
+                  <label for="attachment">Attachment</label>
+                  <div class="file-row">
+                    <input id="attachment" name="attachment" type="file" />
+                    <span id="file-name">No file selected</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-footer">
+                <a class="btn-secondary" href="index.html">Cancel</a>
+                <button type="submit" class="btn-primary">Submit case</button>
+              </div>
+            </form>
+          </section>
+          </div>
+
+          <div data-summary-slot></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Northline Help Center</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="search.html">Articles</a>
+        <a href="submit.html">Submit a case</a>
+      </nav>
+    </footer>
+    <script src="./site.js?v=29"></script>
+  </body>
+</html>

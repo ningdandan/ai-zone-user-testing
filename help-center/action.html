@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Run an action — Northline Help</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23020642'/%3E%3Cpath d='M8 17.5l5 5 11-12' fill='none' stroke='white' stroke-width='2.4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="../tokens.css" />
+    <link rel="stylesheet" href="./site.css?v=30" />
+  </head>
+  <body data-page="action" data-summary-placement="rail">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 3l1.6 4.8L18.5 9.5 13.6 11 12 16l-1.6-5L5.5 9.5 10.4 7.8 12 3z" />
+          </svg>
+        </span>
+        Northline Help
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="search.html">Articles</a>
+        <a class="btn-primary" href="submit.html">Submit a case</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <header class="page-head">
+          <h1 class="page-title">Refund the extra charge</h1>
+          <p class="lede">This sends $86 back on py_1044. It does not answer the dispute, and Friday’s payout stays where it is.</p>
+        </header>
+        <div class="summary-frame">
+          <section class="form-card summary-main" id="action-card" aria-labelledby="action-heading">
+            <header>
+              <h2 id="action-heading">New automation</h2>
+              <span class="status-chip">Runs after you confirm</span>
+            </header>
+            <form id="action-form" novalidate>
+              <div class="form-body">
+                <div class="field field--full" data-required>
+                  <label for="action-type">Action</label>
+                  <select id="action-type" name="action">
+                    <option value="">Choose an action</option>
+                    <option value="review">Request a payout review</option>
+                    <option value="remind">Send an evidence reminder</option>
+                    <option value="refund" selected>Refund a payment</option>
+                    <option value="reset">Reset an authenticator</option>
+                  </select>
+                  <span class="error"></span>
+                </div>
+                <div class="field" data-required>
+                  <label for="action-email">Account email</label>
+                  <input id="action-email" name="email" type="email" autocomplete="email" value="lena@northline.test" />
+                  <span class="error"></span>
+                </div>
+                <div class="field">
+                  <label for="action-reference">Reference id</label>
+                  <input id="action-reference" name="reference" type="text" value="py_1044" />
+                </div>
+                <div class="field field--full">
+                  <label for="action-note">Note for the log</label>
+                  <textarea id="action-note" name="note">Jonah Hale, order 1044. py_1044 is the extra $86. py_1043 is the charge on dispute dp_3k19. Refunding only the extra one.</textarea>
+                </div>
+              </div>
+              <div class="form-footer">
+                <a class="btn-secondary" href="index.html">Cancel</a>
+                <button type="submit" class="btn-primary">Run action</button>
+              </div>
+            </form>
+          </section>
+          <div data-summary-slot></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Northline Help Center</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="search.html?q=charged+twice">Search result</a>
+        <a href="article.html">Knowledge article</a>
+        <a href="submit.html">Submit a case</a>
+        <a href="action.html">Action</a>
+      </nav>
+    </footer>
+    <script src="./site.js?v=29"></script>
+  </body>
+</html>
